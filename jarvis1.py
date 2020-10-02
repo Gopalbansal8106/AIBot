@@ -1,5 +1,6 @@
 //this is an new python library
 import pyttsx3
+import pyautogui
 import datetime
 import speech_recognition as sr
 import wikipedia
@@ -73,6 +74,9 @@ if __name__=='__main__':
             speak(f"sir the time is{strTime}")
         elif 'take screenshot' in query:
             takescreenshoot() 
+        elif 'quit buddy' in query:
+            speak('quitting myself')
+            exit()
         elif 'email to pranesh' in query:
             try:
                 speak("what should i say?")
