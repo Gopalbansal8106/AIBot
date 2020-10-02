@@ -41,7 +41,11 @@ def sendEmail(to,content):
     server.login('your gmail','your password')
     server.sendmail('your mail',to,content)
     server.close()
-
+def takescreenshoot():
+    img = pyautogui.screenshot()
+    img.save(f"E:\\webpage programmming\\screenshot{random.randint(0,4854658)}.png")
+    speak('screenshot taken and saved to decribed location') 
+    
 if __name__=='__main__':
     wishMe()
     while True:
@@ -67,7 +71,8 @@ if __name__=='__main__':
         elif 'the time' in query:
             strTime=datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"sir the time is{strTime}")
-
+        elif 'take screenshot' in query:
+            takescreenshoot() 
         elif 'email to pranesh' in query:
             try:
                 speak("what should i say?")
